@@ -1,4 +1,4 @@
-export enum ProductCategoryEnum {
+export enum ProduitCategoryEnum {
   FOOD = 'Food',
   MEDECINE = 'Medecine',
   BOOKS = 'Books',

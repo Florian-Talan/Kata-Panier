@@ -4,18 +4,18 @@ import { path } from './data/path.data';
 
 const routes: Routes = [
   {
-    path: path.produit,
+    path: path.produit.relative,
     loadChildren: () =>
       import('./module/produit/produit.module').then((m) => m.ProduitModule),
   },
   {
-    path: path.panier,
+    path: path.panier.relative,
     loadChildren: () =>
       import('./module/panier/panier.module').then((m) => m.PanierModule),
   },
   {
     path: '**',
-    redirectTo: path.produit,
+    redirectTo: path.produit.relative,
   },
 ];
 

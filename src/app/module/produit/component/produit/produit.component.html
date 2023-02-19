@@ -1,1 +1,11 @@
-<p>produit works!</p>
+<app-produit-category-filter
+  [(category)]="categoryFilter"
+></app-produit-category-filter>
+<a [routerLink]="pathPannier">Panier:{{ (panier$ | async)!.length }}</a>
+<div
+  *ngFor="
+    let produit of produits$ | async | filterProduitsByCategory : categoryFilter
+  "
+>
+  <app-produit-card [produit]="produit"></app-produit-card>
+</div>

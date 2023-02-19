@@ -1,0 +1,5 @@
+Filtre :
+<select [(ngModel)]="category" (ngModelChange)="emit()">
+  <option [ngValue]="undefined">Aucun</option>
+  <option *ngFor="let cat of list" [ngValue]="cat">{{ cat }}</option>
+</select>

@@ -6,6 +6,5 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [PanierComponent],
   imports: [SharedModule, PannierRoutingModule],
-  bootstrap: [PanierComponent],
 })
 export class PanierModule {}

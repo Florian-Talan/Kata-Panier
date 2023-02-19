@@ -1,4 +1,4 @@
-import { ProductCategoryEnum } from '../enum/product-category.enum';
+import { ProduitCategoryEnum } from '../enum/produit-category.enum';
 
 export const produitsWS = [
   //foods
@@ -8,7 +8,7 @@ export const produitsWS = [
     price: 1.76,
     quantity: 7,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 14,
@@ -16,7 +16,7 @@ export const produitsWS = [
     price: 4.37,
     quantity: 3,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 17,
@@ -24,7 +24,7 @@ export const produitsWS = [
     price: 3.84,
     quantity: 5,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 6,
@@ -32,7 +32,7 @@ export const produitsWS = [
     price: 9.71,
     quantity: 5,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 13,
@@ -40,7 +40,7 @@ export const produitsWS = [
     price: 1.4,
     quantity: 10,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 7,
@@ -48,7 +48,7 @@ export const produitsWS = [
     price: 3.81,
     quantity: 1,
     isImported: false,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 18,
@@ -56,7 +56,7 @@ export const produitsWS = [
     price: 6.02,
     quantity: 4,
     isImported: true,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ export const produitsWS = [
     price: 9.1,
     quantity: 4,
     isImported: false,
-    category: ProductCategoryEnum.FOOD,
+    category: ProduitCategoryEnum.FOOD,
   },
   // medicine
   {
@@ -73,7 +73,7 @@ export const produitsWS = [
     price: 7.86,
     quantity: 3,
     isImported: true,
-    category: ProductCategoryEnum.MEDECINE,
+    category: ProduitCategoryEnum.MEDECINE,
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ export const produitsWS = [
     price: 6.85,
     quantity: 3,
     isImported: false,
-    category: ProductCategoryEnum.MEDECINE,
+    category: ProduitCategoryEnum.MEDECINE,
   },
   {
     id: 15,
@@ -89,7 +89,7 @@ export const produitsWS = [
     price: 9.5,
     quantity: 0,
     isImported: true,
-    category: ProductCategoryEnum.MEDECINE,
+    category: ProduitCategoryEnum.MEDECINE,
   },
   // books
   {
@@ -98,7 +98,7 @@ export const produitsWS = [
     price: 16.38,
     quantity: 7,
     isImported: true,
-    category: ProductCategoryEnum.BOOKS,
+    category: ProduitCategoryEnum.BOOKS,
   },
   {
     id: 11,
@@ -106,7 +106,7 @@ export const produitsWS = [
     price: 14.02,
     quantity: 9,
     isImported: false,
-    category: ProductCategoryEnum.BOOKS,
+    category: ProduitCategoryEnum.BOOKS,
   },
   {
     id: 19,
@@ -114,7 +114,7 @@ export const produitsWS = [
     price: 11.84,
     quantity: 4,
     isImported: false,
-    category: ProductCategoryEnum.BOOKS,
+    category: ProduitCategoryEnum.BOOKS,
   },
   {
     id: 8,
@@ -122,7 +122,7 @@ export const produitsWS = [
     price: 12.61,
     quantity: 8,
     isImported: false,
-    category: ProductCategoryEnum.BOOKS,
+    category: ProduitCategoryEnum.BOOKS,
   },
   // electronic devices
   {
@@ -131,7 +131,7 @@ export const produitsWS = [
     price: 9.18,
     quantity: 8,
     isImported: true,
-    category: ProductCategoryEnum.ELECTRIC,
+    category: ProduitCategoryEnum.ELECTRIC,
   },
   {
     id: 9,
@@ -139,7 +139,7 @@ export const produitsWS = [
     price: 9.16,
     quantity: 5,
     isImported: false,
-    category: ProductCategoryEnum.ELECTRIC,
+    category: ProduitCategoryEnum.ELECTRIC,
   },
   // parfums
   {
@@ -148,7 +148,7 @@ export const produitsWS = [
     price: 73.58,
     quantity: 6,
     isImported: false,
-    category: ProductCategoryEnum.PARFUM,
+    category: ProduitCategoryEnum.PARFUM,
   },
   {
     id: 10,
@@ -156,6 +156,6 @@ export const produitsWS = [
     price: 76.32,
     quantity: 8,
     isImported: false,
-    category: ProductCategoryEnum.PARFUM,
+    category: ProduitCategoryEnum.PARFUM,
   },
 ];
