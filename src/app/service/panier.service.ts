@@ -20,17 +20,17 @@ export class PanierService {
   }
 
   /**
-   * Update products in basket
+   * Add or update produit in basket
    *
    * @param produit produit to add if doesn't exist or update if exist
    *
    */
-  updateOne(produit: Produit) {
-    const produits = this.addOrUpdate(this.panier$.value, produit);
+  addOrUpdate(produit: Produit) {
+    const produits = this.updatePanierList(this.panier$.value, produit);
     this.panier$.next(produits);
   }
 
-  private addOrUpdate(initial: Produit[], element: Produit): Produit[] {
+  private updatePanierList(initial: Produit[], element: Produit): Produit[] {
     const result = [...initial];
     const index = initial.findIndex((e) => e.id === element.id);
     if (index >= 0) {

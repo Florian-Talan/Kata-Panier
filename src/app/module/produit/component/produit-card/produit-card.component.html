@@ -1,1 +1,15 @@
-<p>produit-card works!</p>
+<article>
+  <h1>{{ produit.productName || "Sans nom" }}</h1>
+  <p data-testid="category">Catégorie: {{ produit.category }}</p>
+  <p data-testid="quantity">
+    Quantité disponible: {{ produit.quantity || "Non disponible" }}
+  </p>
+  <form
+    *ngIf="produit.quantity"
+    [formGroup]="cardForm"
+    (ngSubmit)="addInPanier()"
+  >
+    <input type="number" formControlName="quantity" />
+    <button [disabled]="cardForm.invalid" type="submit">Ajouter</button>
+  </form>
+</article>

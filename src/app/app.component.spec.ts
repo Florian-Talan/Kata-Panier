@@ -1,10 +1,12 @@
+import { AppRoutingModule } from './app-routing.module';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
+      imports: [AppRoutingModule],
     }).compileComponents();
   });
 

@@ -3,15 +3,17 @@ import { ProduitFactory } from './../../../factory/produit.factory';
 import { FilterProduitsByCategoryPipe } from './filter-produits-by-category.pipe';
 
 describe('FilterProduitsByCategoryPipe', () => {
+  let pipe: FilterProduitsByCategoryPipe;
+
+  beforeEach(() => {
+    pipe = new FilterProduitsByCategoryPipe();
+  });
+
   it('create an instance', () => {
-    const pipe = new FilterProduitsByCategoryPipe();
     expect(pipe).toBeTruthy();
   });
 
   it('should return null if products is null', () => {
-    /* GIVEN */
-    const pipe = new FilterProduitsByCategoryPipe();
-
     /* WHEN */
     const result = pipe.transform(null);
 
@@ -21,7 +23,6 @@ describe('FilterProduitsByCategoryPipe', () => {
 
   it('should not filter if category is undefined', () => {
     /* GIVEN */
-    const pipe = new FilterProduitsByCategoryPipe();
     const produits = [
       ProduitFactory.generate({ id: 1, category: ProduitCategoryEnum.BOOKS }),
       ProduitFactory.generate({
@@ -44,7 +45,6 @@ describe('FilterProduitsByCategoryPipe', () => {
 
   it('should transform value', () => {
     /* GIVEN */
-    const pipe = new FilterProduitsByCategoryPipe();
     const produits = [
       ProduitFactory.generate({ id: 1, category: ProduitCategoryEnum.BOOKS }),
       ProduitFactory.generate({ id: 2, category: ProduitCategoryEnum.BOOKS }),

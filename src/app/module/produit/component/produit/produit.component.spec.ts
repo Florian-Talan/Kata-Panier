@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { ProduitCardComponent } from './../produit-card/produit-card.component';
 import { ProduitCategoryFilterComponent } from './../../../shared/component/produit-category-filter/produit-category-filter.component';
 import { path } from './../../../../data/path.data';
@@ -14,7 +15,6 @@ import { SharedModule } from 'src/app/module/shared/shared.module';
 describe('ProduitComponent', () => {
   let component: ProduitComponent;
   let fixture: ComponentFixture<ProduitComponent>;
-  let panierService: PanierService;
   let panierSelected = new BehaviorSubject<Produit[]>([]);
 
   beforeEach(async () => {
@@ -25,7 +25,7 @@ describe('ProduitComponent', () => {
         ProduitCardComponent,
         FilterProduitsByCategoryPipe,
       ],
-      imports: [RouterTestingModule, SharedModule],
+      imports: [RouterTestingModule, SharedModule, ReactiveFormsModule],
       providers: [
         {
           provide: PanierService,
@@ -36,7 +36,6 @@ describe('ProduitComponent', () => {
 
     fixture = TestBed.createComponent(ProduitComponent);
     component = fixture.componentInstance;
-    panierService = fixture.debugElement.injector.get(PanierService);
     fixture.detectChanges();
   });
 

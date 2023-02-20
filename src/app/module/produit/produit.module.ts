@@ -6,6 +6,7 @@ import { ProduitRoutingModule } from './produit-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProduitCardComponent } from './component/produit-card/produit-card.component';
 import { FilterProduitsByCategoryPipe } from '../shared/pipe/filter-produits-by-category.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,6 @@ import { FilterProduitsByCategoryPipe } from '../shared/pipe/filter-produits-by-
     ProduitCategoryFilterComponent,
     FilterProduitsByCategoryPipe,
   ],
-  imports: [SharedModule, ProduitRoutingModule],
+  imports: [SharedModule, ProduitRoutingModule, ReactiveFormsModule],
 })
 export class ProduitModule {}
