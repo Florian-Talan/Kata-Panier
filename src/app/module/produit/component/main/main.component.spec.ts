@@ -9,10 +9,9 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ],
-      imports: [ProduitRoutingModule]
-    })
-    .compileComponents();
+      declarations: [MainComponent],
+      imports: [ProduitRoutingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;

@@ -11,7 +11,7 @@ import { Produit } from '../../../model/produit.model';
 @Component({
   selector: 'app-produit-card',
   templateUrl: './produit-card.component.html',
-  styleUrls: ['./produit-card.component.css'],
+  styleUrls: ['./produit-card.component.scss'],
 })
 export class ProduitCardComponent implements OnInit {
   @Input() produit!: Produit;

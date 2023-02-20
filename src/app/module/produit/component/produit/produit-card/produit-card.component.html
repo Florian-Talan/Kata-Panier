@@ -1,4 +1,4 @@
-<article>
+<article class="card blue-color p-2">
   <h1>{{ produit.productName || "Sans nom" }}</h1>
   <p data-testid="category">Catégorie: {{ produit.category }}</p>
   <p data-testid="quantity">
@@ -8,8 +8,15 @@
     *ngIf="produit.quantity"
     [formGroup]="cardForm"
     (ngSubmit)="addInPanier()"
+    class="d-flex flex-align-center"
   >
     <input type="number" formControlName="quantity" />
-    <button [disabled]="cardForm.invalid" type="submit">Ajouter</button>
+    <button
+      class="ml-auto success-element"
+      [disabled]="cardForm.invalid"
+      type="submit"
+    >
+      Ajouter
+    </button>
   </form>
 </article>
