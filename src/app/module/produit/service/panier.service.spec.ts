@@ -8,7 +8,9 @@ describe('PanierService', () => {
   let service: PanierService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [PanierService]
+    });
     service = TestBed.inject(PanierService);
   });
 
@@ -19,10 +21,8 @@ describe('PanierService', () => {
   it('should add one produit in panier', () => {
     /* GIVEN */
     const produit = ProduitFactory.generate({ id: 1, productName: 'test1' });
-
     /* WHEN */
     service.addOrUpdate(produit);
-
     /* THEN */
     expect(service.get().value).toContain(produit);
   });
@@ -37,10 +37,8 @@ describe('PanierService', () => {
     service.addOrUpdate(produit);
     const newQuantity = 4;
     produit.quantity = newQuantity;
-
     /* WHEN */
     service.addOrUpdate(produit);
-
     /* THEN */
     const produits: Produit[] = service.get().value;
     expect(produits.length).toBe(1);

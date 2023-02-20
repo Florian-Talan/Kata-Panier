@@ -1,16 +1,17 @@
+import { ProduitService } from './../../service/produit.service';
+import { PanierService } from './../../service/panier.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProduitCardComponent } from './../produit-card/produit-card.component';
+import { ProduitCardComponent } from './produit-card/produit-card.component';
 import { ProduitCategoryFilterComponent } from './../../../shared/component/produit-category-filter/produit-category-filter.component';
-import { path } from './../../../../data/path.data';
-import { ProduitFactory } from './../../../../factory/produit.factory';
-import { PanierService } from './../../../../service/panier.service';
+import { path } from '../../data/path.data';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ProduitComponent } from './produit.component';
 import { BehaviorSubject, of } from 'rxjs';
-import { Produit } from 'src/app/model/produit.model';
 import { FilterProduitsByCategoryPipe } from 'src/app/module/shared/pipe/filter-produits-by-category.pipe';
 import { SharedModule } from 'src/app/module/shared/shared.module';
+import { Produit } from '../../model/produit.model';
+import { ProduitFactory } from '../../factory/produit.factory';
 
 describe('ProduitComponent', () => {
   let component: ProduitComponent;
@@ -27,6 +28,7 @@ describe('ProduitComponent', () => {
       ],
       imports: [RouterTestingModule, SharedModule, ReactiveFormsModule],
       providers: [
+        ProduitService,
         {
           provide: PanierService,
           useValue: { get: () => panierSelected },

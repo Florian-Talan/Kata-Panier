@@ -1,4 +1,4 @@
-import { ProduitCategoryEnum } from './../../../../enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../../../produit/enum/produit-category.enum';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedModule } from '../../shared.module';
 

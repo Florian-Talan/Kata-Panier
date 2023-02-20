@@ -1,5 +1,5 @@
-import { ProduitCategoryEnum } from './../../../enum/produit-category.enum';
-import { ProduitFactory } from './../../../factory/produit.factory';
+import { ProduitCategoryEnum } from '../../produit/enum/produit-category.enum';
+import { ProduitFactory } from '../../produit/factory/produit.factory';
 import { FilterProduitsByCategoryPipe } from './filter-produits-by-category.pipe';
 
 describe('FilterProduitsByCategoryPipe', () => {

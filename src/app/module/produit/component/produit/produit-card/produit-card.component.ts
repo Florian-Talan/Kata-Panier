@@ -1,12 +1,12 @@
-import { PanierService } from './../../../../service/panier.service';
+import { PanierService } from './../../../service/panier.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { Produit } from 'src/app/model/produit.model';
 import {
   FormBuilder,
   FormGroup,
   Validators,
   AbstractControl,
 } from '@angular/forms';
+import { Produit } from '../../../model/produit.model';
 
 @Component({
   selector: 'app-produit-card',

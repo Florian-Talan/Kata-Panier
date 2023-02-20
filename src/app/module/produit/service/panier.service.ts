@@ -2,25 +2,23 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Produit } from '../model/produit.model';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class PanierService {
   readonly panier$: BehaviorSubject<Produit[]> = new BehaviorSubject<Produit[]>(
     []
   );
 
   /**
-   * Get products in basket
+   * Get produits in panier
    *
-   * @returns the observable with selected product
+   * @returns the observable with selected produits
    */
   get(): BehaviorSubject<Produit[]> {
     return this.panier$;
   }
 
   /**
-   * Add or update produit in basket
+   * Add or update produit in panier
    *
    * @param produit produit to add if doesn't exist or update if exist
    *

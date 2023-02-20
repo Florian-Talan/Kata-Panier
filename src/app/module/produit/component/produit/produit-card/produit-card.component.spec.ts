@@ -1,10 +1,10 @@
-import { PanierService } from './../../../../service/panier.service';
+import { PanierService } from './../../../service/panier.service';
 import { ReactiveFormsModule, AbstractControl } from '@angular/forms';
-import { ProduitFactory } from './../../../../factory/produit.factory';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProduitCardComponent } from './produit-card.component';
-import { ProduitCategoryEnum } from 'src/app/enum/produit-category.enum';
+import { ProduitCategoryEnum } from 'src/app/module/produit/enum/produit-category.enum';
+import { ProduitFactory } from '../../../factory/produit.factory';
 
 describe('ProduitCardComponent', () => {
   let component: ProduitCardComponent;
@@ -18,6 +18,7 @@ describe('ProduitCardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ProduitCardComponent],
+      providers: [PanierService],
       imports: [ReactiveFormsModule],
     }).compileComponents();
 

@@ -1,10 +1,10 @@
-import { path } from './../../../../data/path.data';
-import { PanierService } from './../../../../service/panier.service';
-import { ProduitService } from './../../../../service/produit.service';
+import { PanierService } from './../../service/panier.service';
+import { path } from '../../data/path.data';
+import { ProduitService } from '../../service/produit.service';
 import { Component, OnInit } from '@angular/core';
-import { ProduitCategoryEnum } from 'src/app/enum/produit-category.enum';
+import { ProduitCategoryEnum } from 'src/app/module/produit/enum/produit-category.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Produit } from 'src/app/model/produit.model';
+import { Produit } from '../../model/produit.model';
 
 @Component({
   selector: 'app-produit',

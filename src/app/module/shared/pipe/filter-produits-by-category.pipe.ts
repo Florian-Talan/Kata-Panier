@@ -1,6 +1,6 @@
-import { ProduitCategoryEnum } from './../../../enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../../produit/enum/produit-category.enum';
 import { Pipe, PipeTransform } from '@angular/core';
-import { Produit } from 'src/app/model/produit.model';
+import { Produit } from '../../produit/model/produit.model';
 
 @Pipe({
   name: 'filterProduitsByCategory',
