@@ -1,0 +1,13 @@
+<article class="d-flex flex-align-center">
+  <div class="info-element flex-grow-1">
+    <span>{{ produit.productName }}</span>
+    <span class="ml-3">Qte: {{ produit.quantity }}</span>
+  </div>
+  <button
+    class="ml-2 danger-element remove-panier-button"
+    aria-labelledby="Supprimer du panier"
+    (click)="removeFromPanier()"
+  >
+    -
+  </button>
+</article>

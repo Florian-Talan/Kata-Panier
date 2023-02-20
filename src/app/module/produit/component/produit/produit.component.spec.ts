@@ -17,6 +17,7 @@ describe('ProduitComponent', () => {
   let component: ProduitComponent;
   let fixture: ComponentFixture<ProduitComponent>;
   let panierSelected = new BehaviorSubject<Produit[]>([]);
+  let compiled: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -39,6 +40,7 @@ describe('ProduitComponent', () => {
     fixture = TestBed.createComponent(ProduitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    compiled = fixture.nativeElement as HTMLElement;
   });
 
   it('should create', () => {
@@ -52,10 +54,8 @@ describe('ProduitComponent', () => {
       ProduitFactory.generate({ id: 2 }),
       ProduitFactory.generate({ id: 3 }),
     ]);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     const cards = fixture.nativeElement.querySelectorAll('app-produit-card');
     expect(cards.length).toBe(3);
@@ -67,17 +67,13 @@ describe('ProduitComponent', () => {
       ProduitFactory.generate({ id: 1 }),
       ProduitFactory.generate({ id: 2 }),
     ]);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
-    const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('a')?.textContent).toContain('2');
   });
 
   it('should redirect to pannier view', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
     const link = compiled.querySelector('a');
     expect(link?.attributes.getNamedItem('href')?.value).toBe(
       path.panier.absolute

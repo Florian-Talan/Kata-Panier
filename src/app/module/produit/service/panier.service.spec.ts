@@ -9,7 +9,7 @@ describe('PanierService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PanierService]
+      providers: [PanierService],
     });
     service = TestBed.inject(PanierService);
   });
@@ -43,5 +43,20 @@ describe('PanierService', () => {
     const produits: Produit[] = service.get().value;
     expect(produits.length).toBe(1);
     expect(produits[0].quantity).toBe(newQuantity);
+  });
+
+  it('should delete one produit in panier', () => {
+    /* GIVEN */
+    const produit = ProduitFactory.generate({
+      id: 1,
+      productName: 'test1',
+      quantity: 2,
+    });
+    service.addOrUpdate(produit);
+    /* WHEN */
+    service.delete(produit.id);
+    /* THEN */
+    const produits: Produit[] = service.get().value;
+    expect(produits.length).toBe(0);
   });
 });

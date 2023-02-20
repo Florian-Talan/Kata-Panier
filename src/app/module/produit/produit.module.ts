@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProduitService } from './service/produit.service';
 import { PanierComponent } from './component/panier/panier.component';
 import { MainComponent } from './component/main/main.component';
+import { PanierLineComponent } from './component/panier/panier-line/panier-line.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { MainComponent } from './component/main/main.component';
     ProduitCardComponent,
     ProduitCategoryFilterComponent,
     PanierComponent,
+    PanierLineComponent,
     FilterProduitsByCategoryPipe,
     MainComponent,
   ],
   imports: [SharedModule, ProduitRoutingModule, ReactiveFormsModule],
-  providers: [PanierService, ProduitService]
+  providers: [PanierService, ProduitService],
 })
 export class ProduitModule {}

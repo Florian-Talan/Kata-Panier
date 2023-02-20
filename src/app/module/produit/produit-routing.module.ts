@@ -12,17 +12,17 @@ const routes: Routes = [
     children: [
       {
         path: path.produit.relative,
-        component: ProduitComponent
+        component: ProduitComponent,
       },
       {
         path: path.panier.relative,
-        component: PanierComponent
+        component: PanierComponent,
       },
       {
         path: '**',
         redirectTo: path.produit.relative,
       },
-    ]
+    ],
   },
 ];
 

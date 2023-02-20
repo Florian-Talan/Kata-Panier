@@ -24,15 +24,15 @@ export class ProduitComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.setProduitObs();
-    this.setPanierObs();
+    this.getProduit();
+    this.getPanier();
   }
 
-  private setProduitObs() {
+  private getProduit() {
     this.produits$ = this.produitService.getAll();
   }
 
-  private setPanierObs() {
+  private getPanier() {
     this.panier$ = this.panierService.get();
   }
 }

@@ -18,17 +18,26 @@ export class PanierService {
   }
 
   /**
-   * Add or update produit in panier
+   * Supprime un produit du panier
    *
-   * @param produit produit to add if doesn't exist or update if exist
-   *
+   * @param id id du produit à supprimer
    */
-  addOrUpdate(produit: Produit) {
-    const produits = this.updatePanierList(this.panier$.value, produit);
+  delete(id: number): void {
+    const produits = this.deletePanierItem(this.panier$.value, id);
     this.panier$.next(produits);
   }
 
-  private updatePanierList(initial: Produit[], element: Produit): Produit[] {
+  /**
+   * Add or update produit in panier
+   *
+   * @param produit produit to add if doesn't exist or update if exist
+   */
+  addOrUpdate(produit: Produit) {
+    const produits = this.updatePanierItem(this.panier$.value, produit);
+    this.panier$.next(produits);
+  }
+
+  private updatePanierItem(initial: Produit[], element: Produit): Produit[] {
     const result = [...initial];
     const index = initial.findIndex((e) => e.id === element.id);
     if (index >= 0) {
@@ -37,5 +46,9 @@ export class PanierService {
       result.push(element);
     }
     return result;
+  }
+
+  private deletePanierItem(initial: Produit[], id: number): Produit[] {
+    return initial.filter((p) => p.id !== id);
   }
 }

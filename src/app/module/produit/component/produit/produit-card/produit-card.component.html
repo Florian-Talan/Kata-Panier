@@ -10,7 +10,12 @@
     (ngSubmit)="addInPanier()"
     class="d-flex flex-align-center"
   >
-    <input type="number" formControlName="quantity" />
+    <input
+      type="number"
+      min="0"
+      [max]="produit.quantity"
+      formControlName="quantity"
+    />
     <button
       class="ml-auto success-element"
       [disabled]="cardForm.invalid"

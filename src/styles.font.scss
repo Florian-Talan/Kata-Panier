@@ -1,13 +1,11 @@
 $font-size: (
-    very-big: 1.8rem,
-    big: 1.4rem,
-    default: 1rem,
-    small: 0.8rem,
-    inherit: inherit
+  very-big: 1.8rem,
+  default: 1rem,
+  inherit: inherit,
 );
 
 @each $key, $val in $font-size {
-    .#{"" + $key}-font {
-        font-size: $val;
-    }
+  .#{"" + $key}-font {
+    font-size: $val;
+  }
 }

@@ -41,10 +41,8 @@ describe('ProduitCardComponent', () => {
     /* GIVEN */
     component.produit.category = ProduitCategoryEnum.ELECTRIC;
     const pCategory = compiled.querySelector('[data-testid="category"]');
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(pCategory?.textContent).toContain(ProduitCategoryEnum.ELECTRIC);
   });
@@ -54,10 +52,8 @@ describe('ProduitCardComponent', () => {
     const quantity = 2;
     component.produit.quantity = quantity;
     const pCategory = compiled.querySelector('[data-testid="quantity"]');
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(pCategory?.textContent).toContain(quantity);
   });
@@ -65,10 +61,8 @@ describe('ProduitCardComponent', () => {
   it('should match form value with input ', () => {
     /* GIVEN */
     quantityCtrl.setValue(2);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(inputQuantity.value).toBe('2');
   });
@@ -77,10 +71,8 @@ describe('ProduitCardComponent', () => {
     /* GIVEN */
     component.produit.quantity = 3;
     quantityCtrl.setValue(null);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(submitButton.disabled).toBeTrue();
     expect(quantityCtrl.valid).toBeFalse();
@@ -90,10 +82,8 @@ describe('ProduitCardComponent', () => {
     /* GIVEN */
     component.produit.quantity = 3;
     quantityCtrl.setValue(-1);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(submitButton.disabled).toBeTrue();
     expect(quantityCtrl.valid).toBeFalse();
@@ -103,10 +93,8 @@ describe('ProduitCardComponent', () => {
     /* GIVEN */
     component.produit.quantity = 4;
     quantityCtrl.setValue(5);
-
     /* WHEN */
     fixture.detectChanges();
-
     /* THEN */
     expect(submitButton.disabled).toBeTrue();
     expect(quantityCtrl.valid).toBeFalse();
@@ -117,11 +105,9 @@ describe('ProduitCardComponent', () => {
     spyOn(panierService, 'addOrUpdate');
     component.produit.quantity = 3;
     quantityCtrl.setValue(2);
-
     /* WHEN */
     fixture.detectChanges();
     submitButton.click();
-
     /* THEN */
     expect(panierService.addOrUpdate).toHaveBeenCalledTimes(1);
     expect(panierService.addOrUpdate).toHaveBeenCalledWith({

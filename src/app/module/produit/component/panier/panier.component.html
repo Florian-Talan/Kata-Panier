@@ -1,1 +1,9 @@
-<p>panier works!</p>
+<a [routerLink]="pathProduit">Accueil</a>
+<div>
+  <ng-container *ngIf="{ value: panier$ | async } as panier">
+    <div *ngFor="let produit of panier.value" class="my-2">
+      <app-panier-line [produit]="produit"></app-panier-line>
+    </div>
+    <div *ngIf="!panier.value?.length">Aucun élément dans le panier</div>
+  </ng-container>
+</div>
