@@ -7,6 +7,7 @@ export class ProduitFactory {
       id: 1,
       productName: 'defaultName',
       price: 1,
+      ttcPrice: 1,
       quantity: 1,
       isImported: false,
       category: ProduitCategoryEnum.BOOKS,

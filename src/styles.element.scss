@@ -55,4 +55,8 @@ $elements: (
       }
     }
   }
+
+  a.#{"" + $key}-element {
+    display: inline-block;
+  }
 }

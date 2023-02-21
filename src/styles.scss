@@ -14,12 +14,20 @@ h1 {
   display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .flex-align-center {
   align-items: center;
 }
 
-.h-100 {
-  height: 100%;
+.justify-content-center {
+    justify-content: center;
 }
 
 .align-self-end {
@@ -49,6 +57,9 @@ $spaces: (
     padding-top: $val;
     padding-bottom: $val;
   }
+  .pr-#{"" + $key} {
+    padding-right: $val;
+  }
   .m-#{"" + $key} {
     margin: $val;
   }
@@ -62,5 +73,11 @@ $spaces: (
   }
   .ml-#{"" + $key} {
     margin-left: $val;
+  }
+  .mr-#{"" + $key} {
+    margin-right: $val;
+  }
+  .mb-#{"" + $key} {
+    margin-bottom: $val;
   }
 }

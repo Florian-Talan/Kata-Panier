@@ -1,9 +1,16 @@
-<a [routerLink]="pathProduit">Accueil</a>
-<div>
-  <ng-container *ngIf="{ value: panier$ | async } as panier">
-    <div *ngFor="let produit of panier.value" class="my-2">
+<a class="grey-element mb-2" [routerLink]="pathProduit">Accueil</a>
+<div
+  class="d-flex flex-wrap justify-content-center"
+  *ngIf="{ value: panier$ | async } as panier"
+>
+  <div class="line-panel flex-grow-1">
+    <div *ngFor="let produit of panier.value" class="mb-2">
       <app-panier-line [produit]="produit"></app-panier-line>
     </div>
-    <div *ngIf="!panier.value?.length">Aucun élément dans le panier</div>
-  </ng-container>
+    <div class="text-center" *ngIf="!panier.value?.length">Panier vide</div>
+  </div>
+  <app-panier-resume
+    class="resume-panel"
+    [produits]="panier.value"
+  ></app-panier-resume>
 </div>

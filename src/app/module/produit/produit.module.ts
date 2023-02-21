@@ -12,6 +12,7 @@ import { ProduitService } from './service/produit.service';
 import { PanierComponent } from './component/panier/panier.component';
 import { MainComponent } from './component/main/main.component';
 import { PanierLineComponent } from './component/panier/panier-line/panier-line.component';
+import { PanierResumeComponent } from './component/panier/panier-resume/panier-resume.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PanierLineComponent } from './component/panier/panier-line/panier-line.
     PanierLineComponent,
     FilterProduitsByCategoryPipe,
     MainComponent,
+    PanierResumeComponent,
   ],
   imports: [SharedModule, ProduitRoutingModule, ReactiveFormsModule],
   providers: [PanierService, ProduitService],

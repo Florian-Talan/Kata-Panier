@@ -7,4 +7,5 @@ export interface Produit {
   quantity: number;
   isImported: boolean;
   category: ProduitCategoryEnum;
+  ttcPrice: number;
 }

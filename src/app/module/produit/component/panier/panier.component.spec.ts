@@ -8,6 +8,7 @@ import { PanierService } from '../../service/panier.service';
 import { BehaviorSubject } from 'rxjs';
 import { Produit } from '../../model/produit.model';
 import { ProduitFactory } from '../../factory/produit.factory';
+import { PanierResumeComponent } from './panier-resume/panier-resume.component';
 
 describe('PanierComponent', () => {
   let component: PanierComponent;
@@ -17,7 +18,11 @@ describe('PanierComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PanierComponent, PanierLineComponent],
+      declarations: [
+        PanierComponent,
+        PanierLineComponent,
+        PanierResumeComponent,
+      ],
       imports: [RouterTestingModule],
       providers: [
         {

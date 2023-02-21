@@ -4,18 +4,25 @@
   <p data-testid="quantity">
     Quantité disponible: {{ produit.quantity || "Non disponible" }}
   </p>
+  <p data-testid="price">
+    Prix: {{ produit.ttcPrice | currency }}
+  </p>
   <form
     *ngIf="produit.quantity"
     [formGroup]="cardForm"
     (ngSubmit)="addInPanier()"
     class="d-flex flex-align-center"
   >
+  <label>
+    Qte :
     <input
       type="number"
       min="0"
+      class="flex-grow-1"
       [max]="produit.quantity"
       formControlName="quantity"
     />
+  </label>
     <button
       class="ml-auto success-element"
       [disabled]="cardForm.invalid"

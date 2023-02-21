@@ -47,15 +47,26 @@ describe('ProduitCardComponent', () => {
     expect(pCategory?.textContent).toContain(ProduitCategoryEnum.ELECTRIC);
   });
 
-  it('should display category name ', () => {
+  it('should display quantity ', () => {
     /* GIVEN */
     const quantity = 2;
     component.produit.quantity = quantity;
-    const pCategory = compiled.querySelector('[data-testid="quantity"]');
+    const pQuantity = compiled.querySelector('[data-testid="quantity"]');
     /* WHEN */
     fixture.detectChanges();
     /* THEN */
-    expect(pCategory?.textContent).toContain(quantity);
+    expect(pQuantity?.textContent).toContain(quantity);
+  });
+
+  it('should display price ', () => {
+    /* GIVEN */
+    const price = 5;
+    component.produit.ttcPrice = price;
+    const pPrice = compiled.querySelector('[data-testid="price"]');
+    /* WHEN */
+    fixture.detectChanges();
+    /* THEN */
+    expect(pPrice?.textContent).toContain(price);
   });
 
   it('should match form value with input ', () => {

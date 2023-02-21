@@ -1,3 +1,4 @@
+import { ProduitFactory } from './../factory/produit.factory';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Produit } from '../model/produit.model';
