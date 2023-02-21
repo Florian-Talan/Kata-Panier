@@ -17,8 +17,8 @@ export class PanierResumeComponent implements OnChanges {
   }
 
   private sumPrices() {
-    this.totalTTC = this.produits?.reduce((sum, p) => sum + p.ttcPrice, 0) || 0;
+    this.totalTTC = this.produits?.reduce((sum, p) => sum + (p.quantity * p.ttcPrice), 0) || 0;
     this.totalTaxes =
-      this.produits?.reduce((sum, p) => sum + (p.ttcPrice - p.price), 0) || 0;
+      this.produits?.reduce((sum, p) => sum + (p.quantity * (p.ttcPrice - p.price)), 0) || 0;
   }
 }

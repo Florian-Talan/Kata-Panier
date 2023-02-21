@@ -1,4 +1,4 @@
-import { ProduitFactory } from './../../../factory/produit.factory';
+import { ProduitFactory } from '../../../data/factory/produit.factory';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PanierResumeComponent } from './panier-resume.component';
@@ -24,13 +24,13 @@ describe('PanierResumeComponent', () => {
   it('should sum price', () => {
     /* GIVEN */
     component.produits = [
-      ProduitFactory.generate({ id: 1, price: 10, ttcPrice: 13 }),
-      ProduitFactory.generate({ id: 2, price: 10, ttcPrice: 12 }),
+      ProduitFactory.generate({ id: 1, quantity: 2, price: 10, ttcPrice: 13 }),
+      ProduitFactory.generate({ id: 2, quantity: 1, price: 10, ttcPrice: 12 }),
     ];
     /* WHEN */
-    fixture.detectChanges();
+    component.ngOnChanges();
     /* THEN */
-    expect(component.totalTTC).toBe(25);
-    expect(component.totalTaxes).toBe(5);
+    expect(component.totalTTC).toBe(38);
+    expect(component.totalTaxes).toBe(8);
   });
 });
