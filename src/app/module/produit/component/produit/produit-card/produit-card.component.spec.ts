@@ -3,8 +3,8 @@ import { ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProduitCardComponent } from './produit-card.component';
-import { ProduitCategoryEnum } from 'src/app/module/produit/enum/produit-category.enum';
-import { ProduitFactory } from '../../../factory/produit.factory';
+import { ProduitCategoryEnum } from 'src/app/module/produit/model/enum/produit-category.enum';
+import { ProduitFactory } from '../../../data/factory/produit.factory';
 
 describe('ProduitCardComponent', () => {
   let component: ProduitCardComponent;

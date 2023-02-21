@@ -1,6 +1,6 @@
 import { PanierService } from './../../../service/panier.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProduitFactory } from '../../../factory/produit.factory';
+import { ProduitFactory } from '../../../data/factory/produit.factory';
 
 import { PanierLineComponent } from './panier-line.component';
 

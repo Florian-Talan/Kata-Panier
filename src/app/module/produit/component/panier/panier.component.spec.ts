@@ -7,7 +7,7 @@ import { PanierComponent } from './panier.component';
 import { PanierService } from '../../service/panier.service';
 import { BehaviorSubject } from 'rxjs';
 import { Produit } from '../../model/produit.model';
-import { ProduitFactory } from '../../factory/produit.factory';
+import { ProduitFactory } from '../../data/factory/produit.factory';
 import { PanierResumeComponent } from './panier-resume/panier-resume.component';
 
 describe('PanierComponent', () => {

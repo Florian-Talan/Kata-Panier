@@ -2,16 +2,16 @@ import { ProduitService } from './../../service/produit.service';
 import { PanierService } from './../../service/panier.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProduitCardComponent } from './produit-card/produit-card.component';
-import { ProduitCategoryFilterComponent } from './../../../shared/component/produit-category-filter/produit-category-filter.component';
+import { ProduitCategoryFilterComponent } from './produit-category-filter/produit-category-filter.component';
 import { path } from '../../data/path.data';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ProduitComponent } from './produit.component';
 import { BehaviorSubject, of } from 'rxjs';
-import { FilterProduitsByCategoryPipe } from 'src/app/module/shared/pipe/filter-produits-by-category.pipe';
+import { FilterProduitsByCategoryPipe } from 'src/app/module/produit/pipe/filter-produits-by-category.pipe';
 import { SharedModule } from 'src/app/module/shared/shared.module';
 import { Produit } from '../../model/produit.model';
-import { ProduitFactory } from '../../factory/produit.factory';
+import { ProduitFactory } from '../../data/factory/produit.factory';
 
 describe('ProduitComponent', () => {
   let component: ProduitComponent;

@@ -1,6 +1,6 @@
-import { ProduitCategoryEnum } from '../../../produit/enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../../../model/enum/produit-category.enum';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SharedModule } from '../../shared.module';
+import { SharedModule } from '../../../../shared/shared.module';
 
 import { ProduitCategoryFilterComponent } from './produit-category-filter.component';
 

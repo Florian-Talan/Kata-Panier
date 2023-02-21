@@ -1,5 +1,5 @@
-import { ProduitCategoryEnum } from '../enum/produit-category.enum';
-import { Produit } from '../model/produit.model';
+import { ProduitCategoryEnum } from '../../model/enum/produit-category.enum';
+import { Produit } from '../../model/produit.model';
 
 export class ProduitFactory {
   static generate(values?: Partial<Produit>): Produit {

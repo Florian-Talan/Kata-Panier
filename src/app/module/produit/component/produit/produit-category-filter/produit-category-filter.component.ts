@@ -1,4 +1,4 @@
-import { ProduitCategoryEnum } from '../../../produit/enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../../../model/enum/produit-category.enum';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({

@@ -1,4 +1,4 @@
-import { ProduitCategoryEnum } from 'src/app/module/produit/enum/produit-category.enum';
+import { ProduitCategoryEnum } from 'src/app/module/produit/model/enum/produit-category.enum';
 import { produitsWS } from '../data/produit.data';
 import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';

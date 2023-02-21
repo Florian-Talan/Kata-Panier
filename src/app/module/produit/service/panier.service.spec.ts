@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ProduitFactory } from '../factory/produit.factory';
+import { ProduitFactory } from '../data/factory/produit.factory';
 import { Produit } from '../model/produit.model';
 
 import { PanierService } from './panier.service';

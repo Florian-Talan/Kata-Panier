@@ -1,4 +1,4 @@
-import { ProduitCategoryEnum } from '../enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../model/enum/produit-category.enum';
 
 export const produitsWS = [
   //foods

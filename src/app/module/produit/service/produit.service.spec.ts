@@ -1,8 +1,8 @@
-import { ProduitFactory } from './../factory/produit.factory';
+import { ProduitFactory } from '../data/factory/produit.factory';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 
 import { ProduitService } from './produit.service';
-import { ProduitCategoryEnum } from '../enum/produit-category.enum';
+import { ProduitCategoryEnum } from '../model/enum/produit-category.enum';
 import { Produit } from '../model/produit.model';
 
 describe('ProduitService', () => {

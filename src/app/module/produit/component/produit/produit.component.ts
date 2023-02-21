@@ -2,7 +2,7 @@ import { PanierService } from './../../service/panier.service';
 import { path } from '../../data/path.data';
 import { ProduitService } from '../../service/produit.service';
 import { Component, OnInit } from '@angular/core';
-import { ProduitCategoryEnum } from 'src/app/module/produit/enum/produit-category.enum';
+import { ProduitCategoryEnum } from 'src/app/module/produit/model/enum/produit-category.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Produit } from '../../model/produit.model';
 
@@ -27,5 +27,5 @@ export class ProduitComponent implements OnInit {
     this.produits$ = this.produitService.getAll();
     this.panier$ = this.panierService.get();
   }
-  
+
 }
