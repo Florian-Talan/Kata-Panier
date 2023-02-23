@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { Produit } from '../../../model/produit.model';
+import { TaxService } from '../../../service/tax.service';
 
 @Component({
   selector: 'app-panier-resume',
@@ -12,18 +13,14 @@ export class PanierResumeComponent implements OnChanges {
   totalTaxes!: number;
   totalTTC!: number;
 
+  constructor(private taxService: TaxService) {}
+
   ngOnChanges() {
-    this.sumPrices();
+    this.setPrices();
   }
 
-  private sumPrices() {
-    this.totalTTC = this.produits?.reduce(
-      (sum, p) => sum + p.quantity * p.ttcPrice,
-      0
-    );
-    this.totalTaxes = this.produits?.reduce(
-      (sum, p) => sum + p.quantity * (p.ttcPrice - p.price),
-      0
-    );
+  private setPrices() {
+    this.totalTTC = this.taxService.sumTTCPrice(this.produits);
+    this.totalTaxes = this.taxService.sumTaxPrice(this.produits);
   }
 }

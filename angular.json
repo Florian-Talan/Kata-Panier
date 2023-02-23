@@ -72,7 +72,7 @@
           "options": {
             "codeCoverageExclude": [
               "src/app/app-routing.module.ts",
-              "src/app/interceptor/backend.interceptor.ts"
+              "src/app/core/interceptor/backend.interceptor.ts"
             ],
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",

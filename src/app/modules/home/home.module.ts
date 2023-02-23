@@ -13,6 +13,7 @@ import { PanierComponent } from './component/panier/panier.component';
 import { MainComponent } from './component/main/main.component';
 import { PanierLineComponent } from './component/panier/panier-line/panier-line.component';
 import { PanierResumeComponent } from './component/panier/panier-resume/panier-resume.component';
+import { TaxService } from './service/tax.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,6 @@ import { PanierResumeComponent } from './component/panier/panier-resume/panier-r
     PanierResumeComponent,
   ],
   imports: [SharedModule, HomeRoutingModule, ReactiveFormsModule],
-  providers: [PanierService, ProduitService],
+  providers: [PanierService, ProduitService, TaxService],
 })
 export class HomeModule {}

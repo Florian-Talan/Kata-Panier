@@ -13,6 +13,7 @@ import { Produit } from '../../model/produit.model';
 import { ProduitGenerator } from '../../utils/produit.generator';
 import { FilterProduitsByCategoryPipe } from '../../pipe/filter-produits-by-category.pipe';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { TaxService } from '../../service/tax.service';
 
 describe('ProduitComponent', () => {
   let component: ProduitComponent;
@@ -36,6 +37,7 @@ describe('ProduitComponent', () => {
       ],
       providers: [
         ProduitService,
+        TaxService,
         {
           provide: PanierService,
           useValue: { get: () => panierSelected },

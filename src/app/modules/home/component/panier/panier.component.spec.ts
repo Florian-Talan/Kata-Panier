@@ -9,6 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Produit } from '../../model/produit.model';
 import { ProduitGenerator } from '../../utils/produit.generator';
 import { PanierResumeComponent } from './panier-resume/panier-resume.component';
+import { TaxService } from '../../service/tax.service';
 
 describe('PanierComponent', () => {
   let component: PanierComponent;
@@ -25,6 +26,7 @@ describe('PanierComponent', () => {
       ],
       imports: [RouterTestingModule],
       providers: [
+        TaxService,
         {
           provide: PanierService,
           useValue: { get: () => panierSelected },
