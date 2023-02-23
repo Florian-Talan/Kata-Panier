@@ -1,0 +1,20 @@
+<a class="grey-element mb-2" [routerLink]="pathProduit">Accueil</a>
+<div
+  class="d-flex flex-wrap justify-content-center"
+  *ngIf="panier$ | async as panier"
+>
+  <ng-container *ngIf="panier?.length; else emptyPanier">
+    <div class="line-panel flex-grow-1 mb-2">
+      <app-panier-line
+        *ngFor="let produit of panier"
+        class="d-block mb-2"
+        [produit]="produit"
+      ></app-panier-line>
+    </div>
+    <app-panier-resume
+      class="resume-panel"
+      [produits]="panier"
+    ></app-panier-resume>
+  </ng-container>
+  <ng-template #emptyPanier>Panier vide</ng-template>
+</div>

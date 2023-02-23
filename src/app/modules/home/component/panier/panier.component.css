@@ -1,0 +1,7 @@
+.resume-panel {
+  min-width: 200px;
+}
+
+.line-panel + .resume-panel {
+  padding-left: 1rem;
+}

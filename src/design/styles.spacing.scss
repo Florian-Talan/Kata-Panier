@@ -1,0 +1,27 @@
+$spaces: (
+  1: 0.2rem,
+  2: 0.5rem,
+  3: 1rem,
+  auto: auto,
+);
+
+@each $key, $val in $spaces {
+  $name: "" + $key;
+  .p-#{$name} {
+    padding: $val;
+  }
+  .py-#{$name} {
+    padding-top: $val;
+    padding-bottom: $val;
+  }
+  .my-#{$name} {
+    margin-top: $val;
+    margin-bottom: $val;
+  }
+  .ml-#{$name} {
+    margin-left: $val;
+  }
+  .mb-#{$name} {
+    margin-bottom: $val;
+  }
+}

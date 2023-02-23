@@ -5,11 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./module/produit/produit.module').then((m) => m.ProduitModule),
-  },
-  {
-    path: '**',
-    redirectTo: '',
+      import('./modules/home/home.module').then((m) => m.HomeModule),
   },
 ];
 

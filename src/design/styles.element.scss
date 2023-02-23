@@ -1,0 +1,63 @@
+@import "../styles.var.scss";
+
+$elements: (
+  success: (
+    bg: $green,
+    text: $black,
+    border: $green,
+  ),
+  info: (
+    bg: $white,
+    text: $blue,
+    border: $blue,
+  ),
+  danger: (
+    bg: $white,
+    color: $red,
+    border: $red,
+  ),
+  grey: (
+    bg: $grey,
+    text: $black,
+    border: $grey,
+  ),
+);
+
+@mixin design-element($text, $bg, $border) {
+  padding: 0.5rem 1rem;
+  border: 1px solid $border;
+  border-radius: 2px;
+  color: $text;
+  background-color: $bg;
+
+  &[disabled] {
+    color: $black;
+    background-color: $grey;
+    border: 1px solid $grey;
+  }
+}
+
+@each $key, $val in $elements {
+  $bg: map-get($val, "bg");
+  $text: map-get($val, "text");
+  $border: map-get($val, "border");
+  $name: "" + $key;
+
+  .#{$name}-element {
+    @include design-element($text, $bg, $border);
+  }
+
+  button.#{$name}-element,
+  a.#{$name}-element {
+    &:not([disabled]) {
+      cursor: pointer;
+      &:hover {
+        background-color: darken($bg, 10%);
+      }
+    }
+  }
+
+  a.#{$name}-element {
+    display: inline-block;
+  }
+}

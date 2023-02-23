@@ -70,6 +70,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverageExclude": [
+              "src/app/app-routing.module.ts",
+              "src/app/interceptor/backend.interceptor.ts"
+            ],
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": ["src/favicon.ico", "src/assets"],

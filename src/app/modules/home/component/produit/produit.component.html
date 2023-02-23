@@ -1,0 +1,17 @@
+<div class="d-flex flex-align-center">
+  <app-produit-category-filter
+    [(category)]="categoryFilter"
+  ></app-produit-category-filter>
+  <a class="ml-auto info-element" [routerLink]="pathPannier"
+    >Panier:{{ (panier$ | async)!.length }}</a
+  >
+</div>
+<div class="wrapper py-3">
+  <app-produit-card
+    *ngFor="
+      let produit of (produits$ | async)!
+        | filterProduitsByCategory : categoryFilter
+    "
+    [produit]="produit"
+  ></app-produit-card>
+</div>

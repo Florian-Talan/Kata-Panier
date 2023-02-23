@@ -1,0 +1,16 @@
+<article class="d-flex flex-align-center">
+  <div class="info-element flex-grow-1 wrapper">
+    <span>{{ produit.productName }}</span>
+    <span>Qte: {{ produit.quantity }}</span>
+    <span>Taxes: {{ produit.ttcPrice - produit.price | currency }}</span>
+    <span>Prix unitaire HT : {{ produit.price | currency }}</span>
+    <span>Prix unitaire TTC: {{ produit.ttcPrice | currency }}</span>
+  </div>
+  <button
+    class="ml-2 danger-element remove-panier-button"
+    aria-labelledby="Supprimer du panier"
+    (click)="removeFromPanier()"
+  >
+    -
+  </button>
+</article>

@@ -1,0 +1,21 @@
+@import "../styles.var.scss";
+
+$colors: (
+  red: $red,
+  orange: $orange,
+  blue: $blue,
+  yellow: $yellow,
+  grey: $grey,
+  black: $black,
+  white: $white,
+);
+
+@each $key, $val in $colors {
+  $name: "" + $key;
+  .#{$name}-color {
+    color: $val;
+  }
+  .#{$name}-background {
+    background-color: $val;
+  }
+}
