@@ -1,3 +1,4 @@
+import { HeaderComponent } from './../header/header.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeRoutingModule } from '../../home-routing.module';
 
@@ -9,7 +10,7 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainComponent],
+      declarations: [MainComponent, HeaderComponent],
       imports: [HomeRoutingModule],
     }).compileComponents();
 

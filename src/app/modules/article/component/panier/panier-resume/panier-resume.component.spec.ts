@@ -11,7 +11,7 @@ describe('PanierResumeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PanierResumeComponent],
-      providers: [TaxService]
+      providers: [TaxService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PanierResumeComponent);

@@ -7,7 +7,7 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { produitsWS } from '../../modules/home/resource/produit.data';
+import { produitsWS } from '../../resource/produit.data';
 
 @Injectable()
 export class BackendInterceptor implements HttpInterceptor {

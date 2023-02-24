@@ -71,7 +71,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "codeCoverageExclude": [
-              "src/app/app-routing.module.ts",
+              "**/*-routing.module.ts",
               "src/app/core/interceptor/backend.interceptor.ts"
             ],
             "polyfills": ["zone.js", "zone.js/testing"],
