@@ -18,9 +18,9 @@ export class PanierService {
   }
 
   /**
-   * Supprime un produit du panier
+   * Delete a produit in panier
    *
-   * @param id id du produit à supprimer
+   * @param id id of the produit to delete
    */
   delete(id: number): void {
     const produits = this.deletePanierItem(this.panier$.value, id);

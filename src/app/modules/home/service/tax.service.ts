@@ -17,6 +17,7 @@ const produitCategoryTaxe: ProduitCategoryTaxe = {
 @Injectable()
 export class TaxService {
   readonly DEFAULT_TAX = 20;
+  readonly ROUND_TO = 0.05;
 
   /**
    * Get the ttc price associated to the produit
@@ -35,13 +36,14 @@ export class TaxService {
    * @returns the amount of the taxe
    */
   getTaxPrice(produit: Produit): number {
+    const roundVal = 1 / this.ROUND_TO;
     return (
       Math.ceil(
         ((produit.price *
           this.getProduitTax(produit.category, produit.isImported)) /
           100) *
-          20
-      ) / 20
+          roundVal
+      ) / roundVal
     );
   }
 

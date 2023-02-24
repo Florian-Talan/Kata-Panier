@@ -86,7 +86,7 @@ describe('TaxService', () => {
     /* GIVEN */
     const produit1 = ProduitGenerator.generate({
       id: 1,
-      price: 1.2,
+      price: 0.12,
       isImported: true,
       category: ProduitCategoryEnum.FOOD,
     });
@@ -95,8 +95,8 @@ describe('TaxService', () => {
     const taxe1 = service.getTaxPrice(produit1);
 
     /* THEN */
-    expect(taxe1).not.toBe(0.06);
-    expect(taxe1).toBe(0.1);
+    expect(taxe1).not.toBe(0.01);
+    expect(taxe1).toBe(0.05);
   });
 
   it('should add imported taxe', () => {
